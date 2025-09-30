@@ -9,7 +9,7 @@
         <tagDatabase  tag="${REQUEST_NUMBER}-${BUILD_NUMBER}"/>
     </changeSet>
 <changeSet author="avinash"  id="executeCommand-exp" runAlways="true" runOnChange="true">  
-    <executeCommand  executable="../exp.sh"  
+    <executeCommand  executable="exp.sh"  
             timeout="10s">  
         <arg value="LIQUIBASE_DEV01"/>
         <arg value="XEPDB1"/> 
