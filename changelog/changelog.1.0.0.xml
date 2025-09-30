@@ -9,10 +9,12 @@
         <tagDatabase  tag="${REQUEST_NUMBER}-${BUILD_NUMBER}"/>
     </changeSet>
     <changeSet id="exp_liquibase_dev01" author="avinash">
-        <executeCommand>
-            <command>
-                exp liquibase_dev01/Liqui@123@XEPDB1 file=liquibase_dev01.dmp log=export.log owner=LIQUIBASE_DEV01
-            </command>
+        <executeCommand executable="exp">
+            <arg value="liquibase_dev01/Liqui@123@XEPDB1"/>
+            <arg value="file=liquibase_dev01.dmp"/>
+            <arg value="log=export.log"/>
+            <arg value="owner=LIQUIBASE_DEV01"/>
         </executeCommand>
     </changeSet>
+
 </databaseChangeLog>
