@@ -9,14 +9,13 @@
         <tagDatabase  tag="${REQUEST_NUMBER}-${BUILD_NUMBER}"/>
     </changeSet>
 <changeSet author="avinash"  id="executeCommand-exp" runOnChange="true">  
-    <executeCommand  executable="dbscripts/exp.sh"  
-            timeout="300000">  
+    <executeCommand  executable="dbscripts/exp.sh" timeout="300000">  
         <arg value="LIQUIBASE_DEV01"/>
         <arg value="oracle-db:1521/XEPDB1"/> 
         <arg value="LIQUIBASE_DEV01"/> 
         <arg value="DUMPFILE.dmp"/> 
         <arg value="LOGFILE.log"/> 
-        <arg value="admin123"/>
+        <!-- Remove password argument -->
     </executeCommand>  
 </changeSet>
 
