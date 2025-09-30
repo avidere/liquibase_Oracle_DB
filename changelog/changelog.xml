@@ -9,21 +9,9 @@
         <tagDatabase  tag="${REQUEST_NUMBER}-${BUILD_NUMBER}"/>
     </changeSet>
     <changeSet id="liquibase-2" author="avinash">
-        <sqlFile path="dbscripts/users.sql"/>
+        <sqlFile path="dbscripts/create_table.sql"/>
     <rollback>
-        <sqlFile path="rollback/users_rollback.sql"/>
-    </rollback>
-    </changeSet>
-    <changeSet id="liquibase-3" author="avinash">
-        <sqlFile path="dbscripts/order.sql"/>
-    <rollback>
-        <sqlFile path="rollback/order_rollback.sql"/>
-    </rollback>
-    </changeSet>
-        <changeSet id="liquibase-4" author="avinash">
-        <sqlFile path="dbscripts/user_update.sql"/>
-    <rollback>
-        <sqlFile path="rollback/user_update_rollback.sql"/>
+        <sqlFile path="rollback/table_rollback.sql"/>
     </rollback>
     </changeSet>
 </databaseChangeLog>
