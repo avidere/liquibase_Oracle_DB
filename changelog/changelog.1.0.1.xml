@@ -8,9 +8,16 @@
     <changeSet  author="liquibase-1"  id="avinash">
         <tagDatabase  tag="${REQUEST_NUMBER}-${BUILD_NUMBER}"/>
     </changeSet>
-    <changeSet id="exp_liquibase_dev01" author="avinash">
-        <executeCommand executable="exp.sh">
-        </executeCommand>
-    </changeSet>
+<changeSet author="avinash"  id="executeCommand-exp" runAlways="true" runOnChange="true">  
+    <executeCommand  executable="../exp.sh"  
+            timeout="10s">  
+        <arg value="LIQUIBASE_DEV01"/>
+        <arg value="XEPDB1"/> 
+        <arg value="LIQUIBASE_DEV01"/> 
+        <arg value="DUMPFILE.dmp"/> 
+        <arg value="LOGFILE.log"/> 
+        <arg value="admin123"/>
+    </executeCommand>  
+</changeSet>
 
 </databaseChangeLog>
