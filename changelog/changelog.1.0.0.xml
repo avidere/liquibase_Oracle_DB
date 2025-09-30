@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet  author="liquibase-1"  id="avinash">
+        <tagDatabase  tag="${REQUEST_NUMBER}-${BUILD_NUMBER}"/>
+    </changeSet>
+    <changeSet id="exp_liquibase_dev01" author="avinash">
+        <executeCommand>
+            <command>
+                exp liquibase_dev01/Liqui@123@XEPDB1 file=liquibase_dev01.dmp log=export.log owner=LIQUIBASE_DEV01
+            </command>
+        </executeCommand>
+    </changeSet>
+</databaseChangeLog>
