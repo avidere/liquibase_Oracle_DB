@@ -11,12 +11,12 @@
 <changeSet author="avinash"  id="executeCommand-exp" runOnChange="true">  
     <executeCommand  executable="dbscripts/exp.sh"  
             timeout="10s">  
-        <!-- <arg value="LIQUIBASE_DEV01"/>
-        <arg value="XEPDB1"/> 
+        <arg value="LIQUIBASE_DEV01"/>
+        <arg value="oracle-db:1521/XEPDB1"/> 
         <arg value="LIQUIBASE_DEV01"/> 
         <arg value="DUMPFILE.dmp"/> 
         <arg value="LOGFILE.log"/> 
-        <arg value="admin123"/> -->
+        <arg value="admin123"/>
     </executeCommand>  
 </changeSet>
 
