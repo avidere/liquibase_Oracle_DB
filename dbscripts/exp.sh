@@ -16,11 +16,11 @@ export LD_LIBRARY_PATH = "/opt/oracle/instantclient_21_19:$LD_LIBRARY_PATH"
 # echo DUMPFILE=${DUMPFILE}
 # echo LOGFILE=${LOGFILE}
 # echo PASS=${PASS}
-sqlplus -v
+# sqlplus -v
 
 # exp userid=TEMPADMIN@WKSTQA1 owner=WKSDEPMSUAT file=/path/file_name.dmp log=/path/exportdep.log constraints=y rows=y consistent=y indexes=y statistics=none grants=n compress=n recordlength=65535å buffer=20480000
-# export EXP_CMD="exp userid=LIQUIBASE_DEV01/admin123@XEPDB1 owner=LIQUIBASE_DEV01 file=DUMPFILE.dmp log=LOGFILE.log constraints=y rows=y consistent=y indexes=y statistics=none grants=n compress=n recordlength=65535 buffer=20480000"
+export EXP_CMD="exp userid=LIQUIBASE_DEV01/admin123@//oracle-db:1521/XEPDB1 owner=LIQUIBASE_DEV01 file=DUMPFILE.dmp log=LOGFILE.log constraints=y rows=y consistent=y indexes=y statistics=none grants=n compress=n recordlength=65535 buffer=20480000"
 
-# echo EXP_CMD=${EXP_CMD}
+echo EXP_CMD=${EXP_CMD}
 
-# ${EXP_CMD}
+${EXP_CMD}
